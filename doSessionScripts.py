@@ -35,6 +35,28 @@ greet("Monica", "Garcia", "Good morning!")
 # default argument in function definition
 
 def greet(firstName, lastName, msg="Good morning!"):
+
+
+   """
+   This function greets to
+   the person with the
+   provided message.
+
+   If message is not provided,
+   it defaults to "Good
+   morning!"
+   """
+
+    print("Hello", firstName + ' ' + lastName + ', ' + msg)
+
+greet("Ann", "Robinson")
+greet("Bruce", "Knight", "How do you do?")
+
+################################################################################
+
+# non-default arguments cannot follow default arguments
+
+def greet(msg="Good morning!", firstName, lastName):
    """
    This function greets to
    the person with the
@@ -46,26 +68,6 @@ def greet(firstName, lastName, msg="Good morning!"):
    """
 
    print("Hello", firstName + ' ' + lastName + ', ' + msg)
-
-greet("Ann", "Robinson")
-greet("Bruce", "Knight", "How do you do?")
-
-################################################################################
-
-# non-default arguments cannot follow default arguments
-
-# def greet(msg="Good morning!", firstName, lastName):
-#    """
-#    This function greets to
-#    the person with the
-#    provided message.
-# 
-#    If message is not provided,
-#    it defaults to "Good
-#    morning!"
-#    """
-# 
-#    print("Hello", firstName + ' ' + lastName + ', ' + msg)
 
 ################################################################################
 
@@ -90,7 +92,7 @@ greet(msg="How do you do?", lastName="Smith", firstName="Tom")
 greet("Tom", lastName="Smith", msg="How do you do?")
 
 # Error: positional arguments must preced keyword arguments
-# greet(firstName="Tom", "Smith", msg="How do you do?")
+greet(firstName="Tom", "Smith", msg="How do you do?")
 
 ################################################################################
 
@@ -111,7 +113,7 @@ greetMany("Monica","Luke","Steve","John")
 # Variable number of positional and keyword arguments
 
 def cheeseshop(kind, *arguments, **keywords):
-    # arguments is a tuple
+    # arguments is a tuple - is a list of different arguments that I can use
     #  keywords is a dictionary
     print("-- Do you have any", kind, "?")
     print("-- I'm sorry, we're all out of", kind)
@@ -129,3 +131,19 @@ cheeseshop("Limburger",
            sketch="Cheese Shop Sketch")
 
 ################################################################################
+"""define function multiply2(num1, num2) that returns num1*num2 with default num2=10
+write function multiplyMany(*args, scale=10) and returns the product of args*scale
+e.g. multiplyMany(1, 2, 3, acle=10) should return 1*2*3*scale
+"""
+
+def multiply2(num1, num2):
+    return num1*num2
+
+
+def multiplyMany(*numbers, scale=10):
+    product = 1
+    for number in numbers:
+        product *=number
+    return product*scale
+
+

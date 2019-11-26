@@ -1,11 +1,11 @@
 
-import ipdb
+# import ipdb
 import os
 import pandas as pd
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 
-ipdb.set_trace()
+# ipdb.set_trace()
 
 dataFilename = "data/All_three_exp_conditions_3.csv"
 figFilename = "figures/absSpeedVsSpikesV1.png"
@@ -25,6 +25,7 @@ print(regions)
 
 # We will make a figure with len(trialConditions)==3 panels
 f, axes = plt.subplots(1, len(trialConditions), sharey=True)
+
 
 ### Start first panel
 
@@ -114,7 +115,7 @@ plt.savefig(figFilename)
 
 f.show()
 
-ipdb.set_trace()
+# ipdb.set_trace()
 
 # 1. Modify script to only print the ylabel in the left panel and the xlabel in the  center panel
 # 2. Build and call a function to avoid code repetition
