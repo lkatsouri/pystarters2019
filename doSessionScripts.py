@@ -113,7 +113,7 @@ greetMany("Monica","Luke","Steve","John")
 # Variable number of positional and keyword arguments
 
 def cheeseshop(kind, *arguments, **keywords):
-    # arguments is a tuple - is a list of different arguments that I can use
+    # arguments is a tuple - is a "list" of different arguments that I can use
     #  keywords is a dictionary
     print("-- Do you have any", kind, "?")
     print("-- I'm sorry, we're all out of", kind)
