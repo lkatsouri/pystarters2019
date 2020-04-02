@@ -7,6 +7,9 @@ There are lots of different kinds of variables types that you will encounter. We
 
 - Variables
 A variable is something you declare, just a name you give to some value/computation so that you can read your code
+
+Mutable: lists, sets, dictionaries
+Immutable: Tuples, strings
 """
 from numpy.core.multiarray import ndarray
 
@@ -54,6 +57,7 @@ my_randomly_organised_stuff[0]
 my_randomly_organised_stuff[-1]
 
 """get the 3rd element from the end of the list"""
+my_number_list[-3]
 
 """assign """
 
@@ -76,13 +80,17 @@ my_randomly_organised_tuple[3] = 'gouda'
 my_tuple = (1, 5, 6, 60, 200, 20)
 a, b, c, d, e, f = my_tuple
 a, *b, c = my_tuple
+#*b will unpack everything in between the last and the first item
 
 """ try to split the tuple such that the first three elements go into a single variable"""
+
+*a, d, e, f = my_tuple
+print(a)
 
 """- dictionaries, arrays and sets"""
 
 my_set_of_randomly_organised_stuff = set(my_randomly_organised_stuff)  # casting from a list to a set
-my_number_set = set(my_randomly_organised_stuff)
+my_number_set = set(my_randomly_organised_stuff) #sets are mutable lists that each item is represented only once and are not in order
 my_set_of_randomly_organised_stuff.intersection(my_number_set)
 
 my_dictionary_of_stuff = {'stringy_things': ['cheese', my_string_variable],
